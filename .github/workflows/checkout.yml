@@ -7,9 +7,10 @@ jobs:
     steps:
       - run: ls -al
       - uses: actions/checkout@v3
+        with:
+          path: my-repo
       - name: show list
         run: ls -al
-      - name: show workflow yml file
-        run: cat .github/workflows/checkout.yml
-
+      - name: show my-repo list
+        run: ls -al my-repo
 
