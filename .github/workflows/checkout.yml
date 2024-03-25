@@ -6,9 +6,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/cache@v3
+        id: cache-cache
         with:
           path: dev_dir
           key: ${{ runner.os }}-dev-${{ hashFiles('dev_dir') }}
+      - if: steps.cache-cache.outputs.cache-hit == 'true'
+        run: echo 'hit!'
+      - if: steps.cache-cache.outputs.cache-hit != 'true'
+        run: echo 'miss!'
       - run: |
           if [ -d dev_dir ]; then
             ls -al dev_dir
