@@ -9,7 +9,7 @@ jobs:
         with:
           path: dev_dir
           key: ${{ runner.os }}-dev-${{ hashFiles('dev_dir') }}
-      - runs: ls -al dev_dir
+      - run: ls -al dev_dir
       - uses: actions/checkout@v3
         with:
           ref: dev
