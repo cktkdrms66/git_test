@@ -15,5 +15,6 @@ jobs:
       - name: show my-repo list
         run: ls -al my-repo
       - run: cd my-repo
+      - run: ls -al
       - run: git log --pretty=oneline
 
