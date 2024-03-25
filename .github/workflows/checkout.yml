@@ -10,7 +10,7 @@ jobs:
           path: dev_dir
           key: ${{ runner.os }}-dev-${{ hashFiles('dev_dir') }}
       - run: |
-          if [ -d test ]; then
+          if [ -d dev_dir ]; then
             ls -al test
           fi
       - uses: actions/checkout@v3
