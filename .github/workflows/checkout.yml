@@ -11,7 +11,7 @@ jobs:
           key: ${{ runner.os }}-dev-${{ hashFiles('dev_dir') }}
       - run: |
           if [ -d dev_dir ]; then
-            ls -al test
+            ls -al dev_dir
           fi
       - uses: actions/checkout@v3
         with:
