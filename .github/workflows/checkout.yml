@@ -5,16 +5,8 @@ jobs:
   checkout:
     runs-on: ubuntu-latest
     steps:
-      - run: ls -al
       - uses: actions/checkout@v3
         with:
-          path: my-repo
           fetch-depth: 5
-      - name: show list
-        run: ls -al
-      - name: show my-repo list
-        run: ls -al my-repo
-      - run: cd my-repo
-      - run: ls -al
       - run: git log --pretty=oneline
 
