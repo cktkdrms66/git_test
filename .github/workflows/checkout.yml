@@ -7,4 +7,9 @@ jobs:
     steps:
       - run: ls -al
       - uses: actions/checkout@v3
+      - name: show list
+        run: ls -al
+      - name: show workflow yml file
+        run: cat .github/workflows/checkout.yml
+
 
